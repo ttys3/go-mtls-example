@@ -35,6 +35,9 @@ func main() {
 	// error example 2:
 	// curl  -vvv https://example.localhost:9443
 	// local error: tls: bad record MAC
+
+	// curl mtls the right way
+	// 	curl --cert ./tls/client.pem --key ./tls/client-key.pem --cacert ./tls/ca.pem https://example.localhost:9443
 	tlsConfig := &tls.Config{
 		ClientCAs:  caCertPool,
 		ClientAuth: tls.RequireAndVerifyClientCert,
