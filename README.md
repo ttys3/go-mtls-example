@@ -18,6 +18,8 @@ A Complete Guide to Securely Connecting Go Servers and Clients Using Mutual TLS 
 
 Configuring Your Go Server for Mutual TLS https://smallstep.com/hello-mtls/doc/server/go
 
+Using Mutual TLS on the Client Side with Curl https://smallstep.com/hello-mtls/doc/client/curl
+
 Generating self-signed root CA certificate and private key
 https://github.com/cloudflare/cfssl#generating-self-signed-root-ca-certificate-and-private-key
 
