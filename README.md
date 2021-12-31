@@ -24,3 +24,5 @@ https://github.com/cloudflare/cfssl#generating-self-signed-root-ca-certificate-a
 
 Generating a local-issued certificate and private key
 https://github.com/cloudflare/cfssl#generating-a-local-issued-certificate-and-private-key
+
+mTLS on production usage: https://learn.hashicorp.com/tutorials/nomad/security-enable-tls#node-certificates
