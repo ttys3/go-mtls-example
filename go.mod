@@ -1,3 +1,3 @@
 module github.com/ttys3/go-mtls-example
 
-go 1.17
+go 1.23
