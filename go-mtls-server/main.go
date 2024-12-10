@@ -5,7 +5,6 @@ import (
 	"crypto/tls"
 	"crypto/x509"
 	"fmt"
-	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -24,7 +23,7 @@ func hello(w http.ResponseWriter, req *http.Request) {
 }
 
 func main() {
-	caCert, _ := ioutil.ReadFile(CaCertPath)
+	caCert, _ := os.ReadFile(CaCertPath)
 	caCertPool := x509.NewCertPool()
 	caCertPool.AppendCertsFromPEM(caCert)
 
@@ -42,7 +41,6 @@ func main() {
 		ClientCAs:  caCertPool,
 		ClientAuth: tls.RequireAndVerifyClientCert,
 	}
-	tlsConfig.BuildNameToCertificate()
 
 	http.HandleFunc("/", hello)
 

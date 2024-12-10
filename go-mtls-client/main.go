@@ -4,9 +4,9 @@ import (
 	"crypto/tls"
 	"crypto/x509"
 	"io"
-	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 	"time"
 )
 
@@ -17,7 +17,7 @@ const (
 )
 
 func main() {
-	caCert, err := ioutil.ReadFile(CaCertPath)
+	caCert, err := os.ReadFile(CaCertPath)
 	if err != nil {
 		panic(err)
 	}
